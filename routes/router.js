@@ -13,8 +13,12 @@ router.get('/all-news', async (req, res) => {
 router.get('/news/:id', async (req, res) => {
   var id = ObjectID(req.params.id);
   var results = await News.findById({_id: id});
+
+  let array = [];
+  array.push(results);
+
   return res.json({
-    news: results
+    news: array
   });
 })
 
