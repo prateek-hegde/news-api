@@ -1,6 +1,10 @@
 var mongoose = require('mongoose');
 
 var NewsSchema = new mongoose.Schema({
+  uid:{
+    type: Number,
+    required: true
+  },
   title: {
     type: String,
     required: true
